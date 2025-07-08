@@ -17,7 +17,7 @@ const i18n = createI18n({
       socialLink: 'Social Link',
       namePlaceholder: 'Enter your name',
       emailPlaceholder: 'Enter your email address',
-      msgPlaceholder: 'Enter your name',
+      msgPlaceholder: 'Write your message here ',
       send: 'Send',
       projects: 'List of Projects',
       homepage: 'Home Page',
