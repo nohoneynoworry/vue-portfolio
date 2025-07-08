@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-green-00">
+  <footer class="bg-green-100">
     <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="lg:flex lg:items-start lg:gap-8 place-content-center">
         <div class="mt-8 grid gap-8 lg:mt-0 lg:grid-cols-3 lg:gap-y-16">
