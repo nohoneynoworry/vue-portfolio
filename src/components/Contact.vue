@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-md mx-auto my-5 p-6 bg-green-100 rounded-2xl shadow-md">
     <h2 class="text-2xl text-indigo-500 font-semibold mb-6 text-center">{{ $t('contact') }}</h2>
-    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4">
+    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4" name="contact" netlify>
       <!-- Name Field -->
       <div>
         <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('name') }}</label>
