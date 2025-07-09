@@ -62,6 +62,12 @@
                   class="text-gray-700 transition hover:opacity-75">
                   <img src="@/assets/telegram.svg" width="28" height="28" alt=""></a>
               </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="black">
+                  <path d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z" />
+                </svg>
+              </li>
             </ul>
           </div>
         </div>
