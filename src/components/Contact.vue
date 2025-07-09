@@ -21,9 +21,9 @@
       <!-- Message Field -->
       <div>
         <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('message') }}</label>
-        <field name="message" type="text" v-model="form.message"
+        <textarea name="message" type="text" v-model="form.message"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required :placeholder="$t('msgPlaceholder')" />
+          required :placeholder="$t('msgPlaceholder')"></textarea>
         <ErrorMessage name="message" class="text-red-500 text-sm mt-1" />
       </div>
       <!-- Send Button -->
