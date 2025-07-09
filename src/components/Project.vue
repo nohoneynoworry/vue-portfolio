@@ -58,7 +58,7 @@ import axios from 'axios';
 export default {
   async mounted() {
     try {
-      const response = await axios.get('https://api.github.com/users/nohoneynoworry/repos',
+      const response = await axios.get(`${import.meta.env.VITE_GITHUB_USERS}/nohoneynoworry/repos`,
         {
           headers: {
             'Authorization': `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
