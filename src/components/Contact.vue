@@ -1,11 +1,13 @@
 <template>
   <div class="max-w-md mx-auto my-5 p-6 bg-green-100 rounded-2xl shadow-md">
     <h2 class="text-2xl text-indigo-500 font-semibold mb-6 text-center">{{ $t('contact') }}</h2>
-    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4" name="contact" netlify>
+    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4" name="ask-question"
+      method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <Field type="hidden" name="form-name" value="ask-question" />
       <!-- Name Field -->
       <div>
         <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('name') }}</label>
-        <field name="name" type="text" v-model="form.name"
+        <Field name="name" type="text" v-model="form.name"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
           :placeholder="$t('namePlaceholder')" />
         <ErrorMessage name="name" class="text-red-600 text-sm mt-1" />
@@ -13,7 +15,7 @@
       <!-- Email Field -->
       <div>
         <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('email') }}</label>
-        <field name="email" type="email" v-model="form.email"
+        <Field name="email" type="email" v-model="form.email"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
           :placeholder="$t('emailPlaceholder')" />
         <ErrorMessage name="email" class="text-red-600 text-sm mt-1" />
@@ -61,7 +63,7 @@ export default {
             .min(3, 'Name must be at least 3 characters')
             .required('Name is required'),
           email: yup.string().email('Invalid email').required('Email is required'),
-          message: yup.string().min(10, 'Message must be from 10 to 100 characters').max(100, 'Message must be from 10 to 100 characters').required('Message is required')
+          message: yup.string().min(5, 'Message must be from 5 to 100 characters').max(100, 'Message must be from 5 to 100 characters').required('Message is required')
         })
     }
   },
@@ -74,7 +76,7 @@ export default {
           email: '',
           message: ''
         };
-      }else(alert('Error!'));
+      } else (alert('Error!'));
     }
   }
 }
