@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-8  gap-2 my-4">
-    <div class="text-indigo-500 col-start-4 uppercase">Project name:</div>
+  <div class="grid grid-cols-7  gap-2 my-4">
+    <div class="text-indigo-500 col-start-3 uppercase">Project name:</div>
     <div class="uppercase">{{ project.name }}</div>
-    <div class="text-indigo-500 col-start-4 uppercase">Date pushed:</div>
+    <div class="text-indigo-500 col-start-3 uppercase">Date pushed:</div>
     <div>{{ project.pushed_at }}</div>
-    <div class="text-indigo-500 col-start-4 uppercase">Updated at:</div>
+    <div class="text-indigo-500 col-start-3 uppercase">Updated at:</div>
     <div>{{ project.updated_at }}</div>
   </div>
 </template>
