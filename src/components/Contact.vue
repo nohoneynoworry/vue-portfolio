@@ -1,36 +1,34 @@
 <template>
-  <div class="max-w-md mx-auto my-5 p-6 bg-green-100 rounded-2xl shadow-md">
-    <h2 class="text-2xl text-indigo-500 font-semibold mb-6 text-center">{{ $t('contact') }}</h2>
-    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4" name="ask-question"
-      method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-      <Field type="hidden" name="form-name" value="ask-question" />
+  <div class="max-w-xs mx-auto my-5 p-6 border border-blue-500 rounded-2xl shadow-lg shadow-blue-500/100">
+    <h2 class="text-2xl text-blue-500 font-semibold mb-6 text-center">{{ $t('contact') }}</h2>
+    <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-2">
       <!-- Name Field -->
       <div>
-        <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('name') }}</label>
+        <label class="block text-blue-500 mb-1 text-sm font-medium">{{ $t('name') }}</label>
         <Field name="name" type="text" v-model="form.name"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
           :placeholder="$t('namePlaceholder')" />
-        <ErrorMessage name="name" class="text-red-600 text-sm mt-1" />
+        <ErrorMessage name="name" class="text-red-500 text-sm mt-1" />
       </div>
       <!-- Email Field -->
       <div>
-        <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('email') }}</label>
+        <label class="block text-blue-500 mb-1 text-sm font-medium">{{ $t('email') }}</label>
         <Field name="email" type="email" v-model="form.email"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
           :placeholder="$t('emailPlaceholder')" />
-        <ErrorMessage name="email" class="text-red-600 text-sm mt-1" />
+        <ErrorMessage name="email" class="text-red-500 text-sm mt-1" />
       </div>
       <!-- Message Field -->
       <div>
-        <label class="block text-indigo-500 mb-1 text-sm font-medium">{{ $t('message') }}</label>
-        <textarea name="message" type="text" v-model="form.message"
+        <label class="block text-blue-500 mb-1 text-sm font-medium">{{ $t('message') }}</label>
+        <Field as="textarea" name="message" rows="3" v-model="form.message"
           class="w-full px-4 py-2 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required :placeholder="$t('msgPlaceholder')"></textarea>
+          required :placeholder="$t('msgPlaceholder')" />
         <ErrorMessage name="message" class="text-red-500 text-sm mt-1" />
       </div>
       <!-- Send Button -->
       <button type="submit"
-        class="w-full py-2 bg-indigo-500 text-white font-semibold rounded-xl hover:bg-indigo-400 hover: cursor-pointer">
+        class="w-full py-2 bg-blue-500 text-white font-semibold rounded-xl hover:bg-blue-400 hover: cursor-pointer">
         {{ $t('send') }}
       </button>
     </Form>
