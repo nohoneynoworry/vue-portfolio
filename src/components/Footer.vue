@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-green-100">
-    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <footer class="border-t-1 border-indigo-500">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-4 lg:px-8">
       <div class="lg:flex lg:items-start lg:gap-8 place-content-center">
         <div class="mt-8 grid gap-8 lg:mt-0 lg:grid-cols-3 lg:gap-y-16">
-          <div class="col-span-2 sm:col-span-1">
+          <div class="col-span-2 sm:col-span-1 border-r-1 border-indigo-500">
             <p class="text-md text-gray-900 font-bold">Menu</p>
             <ul class="mt-6 space-y-4 text-md">
               <li>
@@ -74,7 +74,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-span-2 sm:col-span-1">
+          <div class="col-span-2 sm:col-span-1 border-r-1 border-indigo-500">
             <p class="text-md text-gray-900 font-bold">{{ $t('socialLink') }}</p>
             <ul class="mt-6 space-y-4 text-md">
               <li>
@@ -139,9 +139,9 @@
           </div>
         </div>
       </div>
-      <div class="mt-4 border-t pt-4">
+      <div class="my-4 border-t border-indigo-500 py-4">
         <div class="text-center">
-          <p class="text-md text-gray-500">&copy; 2025. All rights reserved.</p>
+          <p class="text-md text-white-500">&copy; 2025. All rights reserved.</p>
         </div>
       </div>
     </div>
