@@ -1,26 +1,26 @@
 <template>
-  <header class="bg-green-100">
+  <header class="bg-pink-300">
     <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-      <router-link class="block text-teal-800" to="/">
+      <router-link class="block" to="/">
         <span class="sr-only">Home</span>
-        <img src="@/assets/Logo.jpg" width="80" height="80" alt="">
+        <img class="rounded-full" src="@/assets/logo.png" width="64" height="64" alt="">
       </router-link>
 
       <div class="flex flex-1 items-center justify-end md:justify-between">
         <nav aria-label="Global" class="hidden md:block">
           <ul class="flex items-center gap-6 text-xl font-semibold text-black">
             <li>
-              <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/about-me" exact>
+              <router-link class="text-white-500 transition hover:text-indigo-500" to="/about-me" exact>
                 {{ $t('about') }}
               </router-link>
             </li>
             <li>
-              <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/project">
+              <router-link class="text-white-500 transition hover:text-indigo-500" to="/project">
                 {{ $t('projects') }}
               </router-link>
             </li>
             <li>
-              <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/contact">
+              <router-link class="text-white-500 transition hover:text-indigo-500" to="/contact">
                 {{ $t('contact') }}
               </router-link>
             </li>
